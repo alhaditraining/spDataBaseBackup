@@ -1,7 +1,6 @@
 # spDataBaseBackup
 
 كيف تعمل
-Backup and restore 
-لقاعدة بيانات 
-sql server 
+خزن لقاعدة بيانات 
+سيكول سيرفر
 ممكن تستدعي الكود من البرنامج 

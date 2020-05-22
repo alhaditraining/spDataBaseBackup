@@ -1,0 +1,13 @@
+ create PROCEDURE [dbo].[DataBaseBackup]
+      @PathName VARCHAR(255),
+      @DatabaseName VARCHAR(255)
+      AS
+      BEGIN
+      SET NOCOUNT ON;
+      DECLARE @filePathLocation VARCHAR(500)
+      SET @filePathLocation = @PathName + @DatabaseName + CONVERT(NVARCHAR(500),GETDATE(),112) + '.BAK'
+      BACKUP DATABASE @DatabaseName
+      TO DISK = @filePathLocation
+      WITH NOINIT,
+      NAME = 'FULL BACKUP'
+      END
